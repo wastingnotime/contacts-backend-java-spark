@@ -13,29 +13,40 @@
 
 ## get started (linux instructions only)
 
-### option 1 - just build and use as docker image
+### option 1 - use latest docker image from dockerhub
+
+execute the remote docker image
+```
+docker run -p 8010:8010 wastingnotime/contacts-backend-java-spark
+```
+
+### option 2 - build and run a local docker image
 build a local docker image
 ```
-docker build --tag contacts.backend.java.spark .
+docker build --tag contacts-backend-java-spark .
 ```
 
 execute the local docker image
 ```
-docker run -p 8010:8010 contacts.backend.java.spark
+docker run -p 8010:8010 contacts-backend-java-spark
 ```
-
-### option 2 - execute from source code
+### option 3 - execute from source code 
 
 - install jdk 21 (TODO: detail)
 - install maven (TODO: detail)
 - go to root of solution and execute the commands below
 
-update dependencies and build
+ensure build generated files clean up
 ```
-maven package
+ mvn clean
 ```
 
-execute application
+build and create package
+```
+ mvn package
+```
+
+and then run the application
 ```
 java -jar target/app-jar-with-dependencies.jar 
 ```
