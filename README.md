@@ -32,7 +32,7 @@ docker run -p 8010:8010 contacts-backend-java-spark
 ```
 ### option 3 - execute from source code 
 
-- install jdk 21 (TODO: detail)
+- install jdk 18 (TODO: detail)
 - install maven (TODO: detail)
 - go to root of solution and execute the commands below
 
